@@ -56,6 +56,7 @@ function updateTask(&$tasks) {
 
     if (isset($tasks[$id])) {
         $newTitle = readline("Enter New Title: ");
+        $newDescription = readline("Enter New Descritpion: ");
 
         $tasks[$id]->setTitle($newTitle);
         $tasks[$id]->setDescription($newDescription);
