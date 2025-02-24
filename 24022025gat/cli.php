@@ -11,11 +11,11 @@ class Task {
         $this->description = $description;
     }
 
-    public function setTitle() {
+    public function setTitle($title) {
         $this->title = $title;
     }
 
-    public function setDescription() {
+    public function setDescription($description) {
         $this->description = $description;
     }
 
