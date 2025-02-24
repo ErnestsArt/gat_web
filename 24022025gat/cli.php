@@ -68,6 +68,7 @@ function updateTask(&$tasks) {
 }
 
 function deleteTask(&$tasks) {
+    $id = readline("Enter Task id to delete: ");
     if (isset($tasks[$id])) {
         unset($tasks[$id]);
         echo "Task Deleted.\n";
