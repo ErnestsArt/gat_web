@@ -6,9 +6,9 @@ class Task {
     private $description;
 
     public function __construct($id, $title, $description) {
-        $id = $this->$id;
-        $title = $this->$title;
-        $description = $this->$description;
+        $this->id = $id;
+        $this->title = $title;
+        $this->description = $description;
     }
 
     public function setTitle() {
