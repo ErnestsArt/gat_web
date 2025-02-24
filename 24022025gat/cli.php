@@ -88,7 +88,7 @@ while (true) {
 
     switch ($choice) {
         case 1:
-            deleteTask($tasks);
+            createTask($tasks);
             break;
         case 2:
             displayAllTasks($tasks);
@@ -97,7 +97,7 @@ while (true) {
             updateTask($tasks);
             break;
         case 4:
-            createTask($tasks);
+            deleteTask($tasks);
             break;
         case 5:
             echo "Exiting the application. Goodbye!\n";
