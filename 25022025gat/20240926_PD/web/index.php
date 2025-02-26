@@ -9,7 +9,7 @@
     <script src="app.js"></script>
 
     <h1>Piesakies webināram!</h1>
-    <form action="" method="post">
+    <form action="confirmation.php" method="post">
         <label for="name">Name: </label>
         <input type="text" name="name" id="name">
         <br>
@@ -29,7 +29,7 @@
         <label for="radio">nē</label>
         <input type="radio" name="yes" id="yes">
         <br>
-        <input type="submit" value="Nosūtīt">
+        <input type="submit" value="Nosūtīt" >
     </form>
     <h1>jau reģistrējušies: </h1>
     
