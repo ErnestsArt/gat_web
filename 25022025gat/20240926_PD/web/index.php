@@ -7,7 +7,7 @@
 </head>
 <body>
     <script src="app.js"></script>
-    
+
     <h1>Piesakies webināram!</h1>
     <form action="" method="post">
         <label for="name">Name: </label>
@@ -31,7 +31,36 @@
         <br>
         <input type="submit" value="Nosūtīt">
     </form>
+    <h1>jau reģistrējušies: </h1>
     
+    <?php 
+    $registeredUsers = [
+        [
+            "name" => "janis",
+            "email" => "janis@inbox.lv",
+            "level" => "Advanced"
+        ],
+        [
+            "name" => "Locco",
+            "email" => "Locco@inbox.lv",
+            "level" => "Beginner"
+        ],
+        [
+            "name" => "artur",
+            "email" => "art12@inbox.lv",
+            "level" => "Advanced"
+        ]
+        ];
+        foreach($registeredUsers as $reguser){
+            echo "Vārds: "
+                . $reguser["name"]
+                . ", E-pasts: "
+                . $reguser["email"]
+                . ", Līmenis: "
+                . $reguser["level"]
+                . "<br>";
+        }
+    ?>
     <a href="blog.php">Next page</a>
 </body>
 </html>
