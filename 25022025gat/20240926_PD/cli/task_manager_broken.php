@@ -10,7 +10,7 @@ class Task {
         $this->id = $id;
         $this->title = $title;
         $this->description = $description;
-        $this->category = $description;
+        $this->category = $category;
     }
 
     public function setTitle($title) {
@@ -32,16 +32,24 @@ class Task {
         echo "Category: " . $this->category . "\n";
         echo "--------------------------\n";
     }
+
+    public function getCategory() {
+        return $this->category;
+    }
 }
 
 $tasks = [];
 
 function displayAllTasks($tasks) {
+    $cat = readline("Enter category to filter (leave empty to show all): ");
+
     if (empty($tasks)) {
         echo "No tasks available.\n";
     } else {
         foreach ($tasks as $task) {
-            $task->displayTask();
+            if (!$cat || $task->getCategory() == $cat) {
+                $task->displayTask();
+            }
         }
     }
 }
@@ -53,7 +61,7 @@ function createTask(&$tasks) {
 
     end($tasks);
     $lastKey = key($tasks);
-    $id = $lastKey + 1;
+    $id = $lastKey === null ? 1 : $lastKey + 1;
 
     $tasks[$id] = new Task($id, $title, $description, $category);
     echo "Task Created.\n";
@@ -62,7 +70,7 @@ function createTask(&$tasks) {
 function updateTask(&$tasks) {
     $id = readline("Enter Task ID to Update: ");
 
-    if ($tasks[$id]) {
+    if (isset($tasks[$id])) {
         $newTitle = readline("Enter New Title: ");
         $newDescription = readline("Enter New Description: ");
         $newCategory = readline("Enter New Category: ");
@@ -90,7 +98,7 @@ function deleteTask(&$tasks) {
 while (true) {
     echo "\nToDo List CLI Application\n";
     echo "1. Create Task\n";
-    echo "2. View All Tasks\n";
+    echo "2. View All Tasks (with category filter)\n";
     echo "3. Update Task\n";
     echo "4. Delete Task\n";
     echo "5. Exit\n";
