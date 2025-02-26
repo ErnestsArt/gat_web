@@ -29,5 +29,6 @@
         <br>
         <input type="submit" value="Nosūtīt">
     </form>
+    <a href="blog.php">Next page</a>
 </body>
 </html>

@@ -24,5 +24,6 @@
         </ul>
     </div>
 
+    <a href="index.php">Next page</a>
 </body>
 </html>
