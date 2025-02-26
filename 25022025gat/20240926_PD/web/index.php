@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="app.js"></script>
+    
     <h1>Piesakies webināram!</h1>
     <form action="" method="post">
         <label for="name">Name: </label>
@@ -29,6 +31,7 @@
         <br>
         <input type="submit" value="Nosūtīt">
     </form>
+    
     <a href="blog.php">Next page</a>
 </body>
 </html>
